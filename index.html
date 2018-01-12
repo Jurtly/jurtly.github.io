@@ -1,30 +1,101 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Hank Quinlan, Horrible Cop</title>
-		<!-- link to main stylesheet -->
-		<link rel="stylesheet" type="text/css" href="/css/main.css">
-	</head>
-	<body>
-		<nav>
-    		<ul>
-        		<li><a href="/">Home</a></li>
-	        	<li><a href="/about">About</a></li>
-        		<li><a href="/cv">CV</a></li>
-        		<li><a href="/blog">Blog</a></li>
-    		</ul>
-		</nav>
-		<div class="container">
-    		<div class="blurb">
-        		<h1>Hi there, I'm Hank Quinlan!</h1>
-				<p>I'm best known as the horrible cop from <em>A Touch of Evil</em> Don't trust me. <a href="/about">Read more about my life...</a></p>
-    		</div><!-- /.blurb -->
-		</div><!-- /.container -->
-		<footer>
-    		<ul>
-        		<li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
-        		<li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>
-			</ul>
-		</footer>
-	</body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+  
+  
+  <title> </title>
+  
+  <style>
+    * {
+      margin: 0 auto;
+      padding: 0;
+      border: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      background: black;
+      font-family: 'Questrial', sans-serif;
+    }
+    
+    #LargeError {
+        visibility: hidden;
+        border: 2px solid black;
+        margin: 0 auto;
+        margin-top: 20%;
+        padding: 1%;
+        width: 60%;
+        text-align: center;
+        
+      }    
+    
+    #device {
+        visibility: hidden;
+      }   
+    
+    @media screen and (min-width: 720px) {
+    body {
+        background-color: lightgreen;
+    }
+      
+      #LargeError {
+        visibility: visible;
+      }
+      
+      #device {
+        visibility: visible;
+      }
+}
+  </style>
+</head>
+<body>
+  <!-- what i basically need is a secretive look.. so everything in black
+        and i need the videos to play in the background, but FIRST i need it to recognize whether its on mobile or a computer.
+        Now i need to add the check for browser size. When the browser is too large, the site will be dummy site that says "you must view this on a phone".
+
+-->
+  <div id="device" style="text-align: center; border:1px dotted black; color:green;"></div>
+<script type="text/javascript">
+  var mobile = 'i dont know';
+  testExp = new RegExp('Android|webOS|iPhone|iPad|' +
+    		       'BlackBerry|Windows Phone|'  +
+    		       'Opera Mini|IEMobile|Mobile' , 
+    		      'i');
+  
+  if (testExp.test(navigator.userAgent)) {
+       document.getElementById("device").innerHTML =
+       		"Your device is a Mobile Device";
+         mobile = 'true'
+  } else {
+       document.getElementById("device").innerHTML = 
+       		"Your device is NOT a Mobile Device";
+         mobile = 'false';
+  };
+</script>
+  
+  
+  <div id="LargeError">
+    <h2> Nothing here to see... </h2>
+  </div>
+  
+  
+  <div id="Bigwrap">
+    <!-- so in this big wrap.. what I want to do is place the video on the background.
+  I can use the video element..
+  Use a graphic to entertain while the video loads, then make a hidden button in the middle of the screen.
+  The graphic is the truejihad logo
+
+-->
+    
+    
+    
+    
+  </div>
+  
+  
+</body>
 </html>
