@@ -35,7 +35,19 @@
     
     #device {
         visibility: hidden;
-      }   
+      }
+    
+    #video-background {
+/*  making the video fullscreen  */
+  position: fixed;
+  right: 0; 
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  width: auto; 
+  height: auto;
+  z-index: -100;
+}
     
     @media screen and (min-width: 720px) {
     body {
@@ -91,6 +103,13 @@
 
 -->
     
+    <video autoplay loop id="video-background" plays-inline>
+  <source src="https://github.com/Jurtly/jurtly.github.io/blob/master/TJWebIntro.mp4">
+</video>
+    <audio controls>
+  <source src="https://github.com/Jurtly/jurtly.github.io/blob/master/justin_mcleod_eerie.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
     
     
     
