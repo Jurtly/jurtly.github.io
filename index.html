@@ -142,8 +142,8 @@ Your browser does not support the audio element.
       var player;
       function onYouTubeIframeAPIReady() {
         player = new YT.Player('player', {
-          height: '1280',
-          width: '720',
+          height: '812',
+          width: '375',
           videoId: 'OsQ-cUDpV6Q',
           events: {
             'onReady': onPlayerReady,
@@ -175,6 +175,7 @@ Your browser does not support the audio element.
          if (event.data == YT.PlayerState.PAUSED&& done) { 
            alert('Check');
            nextScene = true;
+           checkScene();
          };
       }
         function pauseVideo() {
@@ -188,7 +189,20 @@ Your browser does not support the audio element.
         }
       
      
+     
       </script>
+      
+<script>
+  // personal script
+  
+  var Videobox = document.getElementById('BigWrap');
+  
+  function checkScene() {
+    if (nextScene == true) {
+      Videobox.style.visiblity = "hidden";
+    }
+  };
+</script>
     
     </div>
   </div>
