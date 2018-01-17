@@ -130,6 +130,8 @@ Your browser does not support the audio element.
     <script>
       // my extra code, putting on top
       var nextScene =  false;
+      var Videobox = document.getElementById('video-background');
+      
       // 2. This code loads the IFrame Player API code asynchronously.
       var tag = document.createElement('script');
 
@@ -148,7 +150,6 @@ Your browser does not support the audio element.
           events: {
             'onReady': onPlayerReady,
             'onStateChange': onPlayerStateChange,
-            'onStateChange': nextScene
           },
           playerVars: {
             rel: 0,
@@ -176,6 +177,7 @@ Your browser does not support the audio element.
          if (event.data == YT.PlayerState.PAUSED && done) { 
            alert('Check');
            nextScene = true;
+           checkScene();
          };
       }
         function pauseVideo() {
@@ -187,18 +189,18 @@ Your browser does not support the audio element.
         function getDuration() {
         player.getDuration();
         }
+        
+        function checkScene() {
+          if (nextScene == true) {
+            alert('nextscene is true');
+            Videobox.style.visiblity = 'hidden';
+            console.log('box should be hidden');
+          }
+        }; 
       
-   // personal script
+
   
-  var Videobox = document.getElementById('video-background');
-  
-  function checkScene() {
-    if (nextScene == true) {
-      alert('nextscene is true');
-      Videobox.style.visiblity = 'hidden';
-      console.log('box should be hidden');
-    }
-  };    
+   
      
       </script>
       
