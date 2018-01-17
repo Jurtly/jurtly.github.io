@@ -147,7 +147,8 @@ Your browser does not support the audio element.
           videoId: 'OsQ-cUDpV6Q',
           events: {
             'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange
+            'onStateChange': onPlayerStateChange,
+            'onStateChange': nextScene
           },
           playerVars: {
             rel: 0,
@@ -172,10 +173,9 @@ Your browser does not support the audio element.
           setTimeout(pauseVideo, 9998);
           done = true;
          }
-         if (event.data == YT.PlayerState.PAUSED&& done) { 
+         if (event.data == YT.PlayerState.PAUSED && done) { 
            alert('Check');
            nextScene = true;
-           checkScene();
          };
       }
         function pauseVideo() {
